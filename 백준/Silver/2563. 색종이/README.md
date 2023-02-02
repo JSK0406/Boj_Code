@@ -1,6 +1,9 @@
 # [Silver V] 색종이 - 2563 
 
 [문제 링크](https://www.acmicpc.net/problem/2563) 
+### Comment
+
+리스트로 matrix 형태를 만들어 100 * 100 배열을 만들었는데 생각보다 처리속도가 빨랐다.
 
 ### 성능 요약
 
