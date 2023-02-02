@@ -2,6 +2,9 @@
 
 [문제 링크](https://www.acmicpc.net/problem/2566) 
 
+### Comment
+max가 list의 예약어이므로 최대값 변수로 max를 사용하면 int is not callable이라는 오류가 뜬다.
+
 ### 성능 요약
 
 메모리: 31256 KB, 시간: 40 ms
