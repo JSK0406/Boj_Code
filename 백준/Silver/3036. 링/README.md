@@ -2,6 +2,26 @@
 
 [문제 링크](https://www.acmicpc.net/problem/3036) 
 
+### Comment
+유클리드 호제법 코드
+
+def gcd(A, B):
+	A, B = max(A, B), min(A, B)
+	while B > 1:
+		if A % B == 0:
+			return B
+		else:
+			A, B = B, A % B
+	return 1
+
+///간단 코드///
+def gcd(A, B):
+	A, B = max(A, B), min(A, B)
+	while B > 0:  # B가 0가 될 때까지
+    	A, B = B, A % B
+	return A  # B가 0가 되는 순간 A을 값을 반환
+-> 알고리즘을 진행하면서 B가 0이 되는 순간 A를 반환한다(최대공약수가 존재하지 않아도 1은 무조건 공약수이기 때문에 이렇게 작성해도 가능하다)
+
 ### 성능 요약
 
 메모리: 31256 KB, 시간: 44 ms
