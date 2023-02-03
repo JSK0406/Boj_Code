@@ -2,6 +2,10 @@
 
 [문제 링크](https://www.acmicpc.net/problem/11051) 
 
+### Comment
+
+0번째 인덱스도 1
+
 ### 성능 요약
 
 메모리: 31256 KB, 시간: 44 ms
