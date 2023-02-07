@@ -2,6 +2,10 @@
 
 [문제 링크](https://www.acmicpc.net/problem/1991) 
 
+### Comment
+
+재귀함수의 호출 node가 none일 때 return / 딕셔너리로 구성하면 빠르게 접근할 수 있다.
+
 ### 성능 요약
 
 메모리: 31256 KB, 시간: 44 ms
