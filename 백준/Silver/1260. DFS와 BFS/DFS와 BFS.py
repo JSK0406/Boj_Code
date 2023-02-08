@@ -26,12 +26,23 @@ def bfs(v):
                 q.append(i)
                 visit1[i]=1
 
-def dfs(v):
-    visit2[v]=1
-    print(v, end=' ')
-    for i in graph[v]:
-        if visit2[i]==0:
-            dfs(i)
+def dfs(V):
+    stack = [V]
+    current = V
+    while stack:
+        next = None
+        if visit2[current] == 0:
+            visit2[current] = 1
+            print(current, end=' ')
+        for i in graph[current]:
+            if visit2[i] == 0:
+                next = i
+                break
+        if next != None:
+            stack.append(current)
+            current = next
+        else:
+            current = stack.pop()
 
 dfs(V)
 print()
