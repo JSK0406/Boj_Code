@@ -2,6 +2,10 @@
 
 [문제 링크](https://www.acmicpc.net/problem/3273) 
 
+### Comment
+
+left가 right와 같은 상황에서는 카운트가 올라가면 안되므로 while : left < right로 처리한다. 등호가 붙을지는 문제에 따라 바뀐다.
+
 ### 성능 요약
 
 메모리: 42176 KB, 시간: 100 ms
