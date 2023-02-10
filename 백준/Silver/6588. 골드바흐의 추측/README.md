@@ -2,6 +2,10 @@
 
 [문제 링크](https://www.acmicpc.net/problem/6588) 
 
+### Commnet
+
+primenumbers를 값으로 환산하여 리턴하지않고 boolean값으로 그대로 return하여 인덱싱 
+
 ### 성능 요약
 
 메모리: 125920 KB, 시간: 768 ms
