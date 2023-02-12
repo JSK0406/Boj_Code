@@ -2,6 +2,10 @@
 
 [문제 링크](https://www.acmicpc.net/problem/2559) 
 
+### Comment
+
+answer의 기본값을 0으로 정의해서 오류가 났다.
+
 ### 성능 요약
 
 메모리: 40292 KB, 시간: 104 ms
