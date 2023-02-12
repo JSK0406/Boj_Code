@@ -2,6 +2,10 @@
 
 [문제 링크](https://www.acmicpc.net/problem/9935) 
 
+### Comment
+
+find의 문자열의 개수만큼 pop하기보다 del list slicing을 사용하는 것이 더 효율이 좋다.
+
 ### 성능 요약
 
 메모리: 71692 KB, 시간: 476 ms
