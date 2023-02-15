@@ -2,6 +2,12 @@
 
 [문제 링크](https://www.acmicpc.net/problem/11279) 
 
+### Comment
+
+heap자료구조 : 최댓값과 최솟값 연산을 빠르게 하기 위해 고안된 완전이진트리
+import heapq하고 일반 리스트에 heapq의 메소드를 사용하여 heap구조를 활용할 수 있다.
+
+
 ### 성능 요약
 
 메모리: 46396 KB, 시간: 176 ms
