@@ -2,6 +2,10 @@
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/118666) 
 
+### Comment
+
+짝수 홀수 규칙 이용
+
 ### 성능 요약
 
 메모리: 10.3 MB, 시간: 0.40 ms
