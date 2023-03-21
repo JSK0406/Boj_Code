@@ -2,9 +2,7 @@ import sys
 input = sys.stdin.readline
 
 N = int(input())
-stack = []
-for _ in range(N):
-    stack.append(int(input()))
+stack = [int(input()) for _ in range(N)]
 
 answer = 0
 largest = 0
