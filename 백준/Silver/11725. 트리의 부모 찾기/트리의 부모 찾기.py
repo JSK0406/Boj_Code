@@ -1,22 +1,28 @@
 import sys
+input = sys.stdin.readline
 
-N = int(sys.stdin.readline())
-lst = [[] for _ in range(N+1)]
+N = int(input())
+
+visit = [0] * (N+1)
+edge_lst = [[] for _ in range(N+1)]
+parents_lst = [0] * (N+1)
+
+def dfs(v):
+    stack = [v]
+    while stack:
+        p = stack.pop()
+        visit[p] = 1
+        for c in edge_lst[p]:
+            if not visit[c]:
+                parents_lst[c] = p
+                stack.append(c)
 
 for _ in range(N-1):
-    A, B = map(int, sys.stdin.readline().split())
-    lst[A].append(B)
-    lst[B].append(A)
+    a, b = map(int, input().split())
+    edge_lst[a].append(b)
+    edge_lst[b].append(a)
 
-answer = [0 for _ in range(N+1)]
+dfs(1)
 
-q = [1]
-while q:
-    tmp = q.pop(0)
-    for i in lst[tmp]:
-        if answer[i] == 0:
-            answer[i] = tmp
-            q.append(i)
-
-for i in answer[2:]:
-    print(i)
+for i in range(2, N+1):
+    print(parents_lst[i])
