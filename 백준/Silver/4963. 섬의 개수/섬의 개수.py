@@ -1,31 +1,35 @@
 import sys
-sys.setrecursionlimit(10000)
+from collections import deque
+input = sys.stdin.readline
 
-dx = [-1,1,0,0,-1,-1,1,1]
-dy = [0,0,-1,1,1,-1,1,-1]
+dx = [-1, -1, -1, 0, 0, 1, 1, 1]  # col
+dy = [-1, 0, 1, -1, 1, -1, 0, 1]  # row
 
-def dfs(x,y,graph):
-    for i in range(8):
-        nx = x+dx[i]
-        ny = y+dy[i]
-        if 0<=nx<h and 0<=ny<w and graph[nx][ny]==1:
-            graph[nx][ny]=0
-            dfs(nx,ny,graph)
+def check(row, col):
+    global cnt
+    global graph
 
-
+    q = deque()
+    q.append((row, col))
+    graph[row][col] = 0
+    while q:
+        row, col = q.popleft()
+        for i in range(8):
+            next_row, next_col = row + dy[i], col + dx[i]
+            if 0 <= next_row and next_row < h and 0 <= next_col and next_col < w:
+                if graph[next_row][next_col]:
+                    graph[next_row][next_col] = 0
+                    q.append((next_row, next_col))
+    cnt += 1
+            
 while True:
-    w,h = map(int,sys.stdin.readline().split())
-    if w==0 and h==0:
+    w, h = map(int, input().split())  # col, row
+    if not w and not h:
         break
-    answer = 0
-    graph = []
-    for _ in range(h):
-        graph.append(list(map(int,sys.stdin.readline().split())))
-    for x in range(h):
-        for y in range(w):
-            if graph[x][y]==1:
-                graph[x][y]=0
-                dfs(x,y,graph)
-                answer+=1
-    print(answer)
-
+    graph = [list(map(int, input().split())) for _ in range(h)]
+    cnt = 0
+    for row in range(h):
+        for col in range(w):
+            if graph[row][col]:
+                check(row, col)
+    print(cnt)
