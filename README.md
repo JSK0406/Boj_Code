@@ -54,7 +54,7 @@
 
 <img src="https://img.shields.io/badge/amazonec2-FF9900?style=for-the-badge&logo=amazonec2&logoColor=white"> <img src="https://img.shields.io/badge/amazonrds-527FFF?style=for-the-badge&logo=amazonrds&logoColor=white"> <img src="https://img.shields.io/badge/netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white">
 
-### 아키텍쳐
+## Architecture
 
 ## API Doc
 
@@ -64,8 +64,4 @@
 
 ![flow chart.png](README%2073698bbc33684f50bd9ab9f10e5f5600/flow_chart.png)
 
-## Class Diagram
 
-## User flowchart
-
-![flow chart.png](README%2073698bbc33684f50bd9ab9f10e5f5600/flow_chart.png)
