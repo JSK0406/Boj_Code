@@ -1,6 +1,6 @@
 # Boj_Code
 
-
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=white">
 # README
 
 # 개인화 식물 재배 및 관리 시스템 구축
