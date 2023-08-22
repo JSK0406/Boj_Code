@@ -46,8 +46,8 @@
 ## Class Diagram
 
 ## User flowchart
+![flow chart](https://github.com/JSK0406/Boj_Code/assets/122510664/435ebbc3-f845-4302-966d-aad862e91877)
 
-![flow chart.png](README%2073698bbc33684f50bd9ab9f10e5f5600/flow_chart.png)
 
 ## Acknowledgement
 
