@@ -5,41 +5,37 @@ let input = fs.readFileSync(filePath).toString().trim().split('\n');
 const N = Number(input.shift())
 const M = Number(input.shift())
 
-const isPointedArr = Array(N+1).fill(false);
-const pointedArr = Array(N+1).fill(0);
+const degreeArr = Array(N+1).fill(0);
 const pointingArr = Array.from({length: N+1}, () => []);
 const ansArr = Array(N+1).fill(0)
 const isMainArr = Array(N+1).fill(true);
 
 for (let i = 0; i < M; i++) {
     const [thisNum, neededNum, cnt] = input.shift().split(' ').map(Number);
-    pointedArr[neededNum] += 1;
+    degreeArr[neededNum] += 1;
     pointingArr[thisNum].push([neededNum, cnt]);
     isMainArr[thisNum] = false
 }
 
 const q = [];
-while (true) {
-    for (let i = 1; i < N+1; i++) {
-        if (pointedArr[i] === 0 && !isPointedArr[i]) {
-            q.push(i);
-            isPointedArr[i] = true;
-        }
-    }
-    if (q.length === 0) {
-        break;
-    }
 
-    while (q.length > 0) {
-        const nowNum = q.shift();
-        for (lst of pointingArr[nowNum]) {
-            const [num, cnt] = lst;
-            pointedArr[num] -= 1;
-            if (ansArr[nowNum] === 0) {
-                ansArr[num] += cnt;
-            } else {
-                ansArr[num] += ansArr[nowNum] * cnt;
-            }
+for (let i = 1; i < N+1; i++) {
+    if (degreeArr[i] === 0) {
+        q.push(i);
+    }
+}
+
+while (q.length > 0) {
+    const now = q.shift();
+    for (const [next, cnt] of pointingArr[now]) {
+        degreeArr[next] -= 1;
+        if (ansArr[now] === 0) {
+            ansArr[next] += cnt;
+        } else {
+            ansArr[next] += ansArr[now] * cnt;
+        }
+        if (degreeArr[next] === 0) {
+            q.push(next);
         }
     }
 }
