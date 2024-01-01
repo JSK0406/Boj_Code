@@ -8,11 +8,12 @@ const edges = [...originEdges];
 
 let ans = 0;
 
-while (edges.length > 0) {
-    const upperInx = Number.parseInt((edges.length-1)/2)-1;
-    const [leftNum, rightNum] = [edges.pop(), edges.pop()]
-    ans += Math.abs(leftNum-rightNum) + originEdges.pop() + originEdges.pop();
+for (let i = edges.length-1; i >= 0; i--) {
+    const upperInx = Number.parseInt((i-1)/2)-1;
+    const [leftNum, rightNum] = [edges[i-1], edges[i]]
+    ans += Math.abs(leftNum-rightNum) + originEdges[i-1] + originEdges[i];
     edges[upperInx] += Math.max(leftNum, rightNum);
+    i--;
 }
 
 console.log(ans);
