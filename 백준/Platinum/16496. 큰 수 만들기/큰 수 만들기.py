@@ -15,7 +15,7 @@ for number in numbers:
     
     idx = 0
     while True:
-        if len(str_number) == 20:
+        if len(str_number) == 10:
             break
     
         str_number += str_number[idx]
