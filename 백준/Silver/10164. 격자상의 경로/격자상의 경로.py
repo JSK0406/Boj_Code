@@ -10,14 +10,12 @@ for r in range(row+1):
 
 for c in range(col+1):
     dp[0][c] = 0
-k_row, k_col = K//col + 1, K%col
+k_row, k_col = (K-1)//col + 1, (K-1)%col + 1
 
-for r in range(2, row+1):
-    for c in range(2, col+1):
-        dp[r][c] = dp[r-1][c] + dp[r][c-1]
-# print(dp)
-# print(k_row, k_col)
-# print(dp[k_row][k_col])
+for r in range(1, row+1):
+    for c in range(1, col+1):
+        dp[r][c] = max(dp[r-1][c] + dp[r][c-1], 1)
+
 if K == 0:
     print(dp[row][col])
 else:
