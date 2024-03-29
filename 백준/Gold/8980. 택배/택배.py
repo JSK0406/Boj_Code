@@ -10,7 +10,7 @@ for _ in range(M):
     S, E, B = map(int, input().split())  # 보내는 마을, 받는 마을, 박스 개수
     info_lst.append((E-S, S, E, B))
 
-info_lst.sort(key=lambda x:(x[0], -x[2], -x[3]))
+info_lst.sort(key=lambda x:(x[2]))
 
 start_lst = [0 for _ in range(N+1)]
 end_lst = [0 for _ in range(N+1)]
