@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+# UTF-8 encoding when using korean
+
+import sys
+input = sys.stdin.readline
+
+money = 0
+is_success = True
+for _ in range(int(input())):
+	com, num = input().split()
+	num = int(num)
+	
+	if com == 'in':
+		money += num
+	if com == 'out':
+		money -= num
+	if money < 0:
+		break
+
+if money >= 0:
+	print('success')
+else:
+	print('fail')
